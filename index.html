@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | سياسة الخصوصية</title>
+  <meta name="description" content="Bilingual privacy policy page for Salary Calculator / حساب الراتب" />
+  <style>
+    :root {
+      --bg1: #f8fbff;
+      --bg2: #eef5ff;
+      --card: rgba(255,255,255,0.86);
+      --border: rgba(20, 65, 120, 0.12);
+      --text: #10233f;
+      --muted: #5b6b84;
+      --primary: #1769d2;
+      --primary-soft: rgba(23, 105, 210, 0.10);
+      --accent: #00a6a6;
+      --shadow: 0 20px 50px rgba(17, 41, 77, 0.10);
+      --radius: 24px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(23, 105, 210, 0.14), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(0, 166, 166, 0.10), transparent 28%),
+        linear-gradient(180deg, var(--bg1), var(--bg2));
+      min-height: 100vh;
+    }
+
+    .shell {
+      width: min(1240px, calc(100% - 32px));
+      margin: 28px auto;
+    }
+
+    .hero {
+      border: 1px solid var(--border);
+      background: linear-gradient(135deg, rgba(255,255,255,0.92), rgba(255,255,255,0.78));
+      backdrop-filter: blur(12px);
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+      padding: 30px;
+      margin-bottom: 22px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(10px);
+      pointer-events: none;
+    }
+
+    .hero::before {
+      width: 220px;
+      height: 220px;
+      top: -90px;
+      right: -60px;
+      background: rgba(23, 105, 210, 0.08);
+    }
+
+    .hero::after {
+      width: 190px;
+      height: 190px;
+      bottom: -90px;
+      left: -60px;
+      background: rgba(0, 166, 166, 0.08);
+    }
+
+    .hero-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: start;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+
+    .title-wrap h1 {
+      margin: 0;
+      font-size: clamp(30px, 5vw, 42px);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    .title-wrap p {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.7;
+      max-width: 760px;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      background: rgba(255,255,255,0.76);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .contact-card {
+      min-width: min(100%, 340px);
+      padding: 18px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.80);
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(17, 41, 77, 0.06);
+    }
+
+    .contact-card h2 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .contact-card p,
+    .contact-card a {
+      margin: 6px 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+      word-break: break-word;
+    }
+
+    .contact-card a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .panel {
+      background: var(--card);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      padding: 26px;
+    }
+
+    .panel-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(16, 35, 63, 0.08);
+    }
+
+    .panel-header h2 {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.2;
+    }
+
+    .panel-header .tag {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .section {
+      margin: 0 0 20px;
+      padding: 0 0 18px;
+      border-bottom: 1px dashed rgba(16, 35, 63, 0.10);
+    }
+
+    .section:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .section h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: var(--text);
+    }
+
+    .section p,
+    .section li {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.9;
+      margin: 0;
+    }
+
+    .section ul {
+      margin: 8px 0 0;
+      padding-left: 20px;
+    }
+
+    .ar {
+      direction: rtl;
+      text-align: right;
+      font-family: "Tajawal", "Cairo", "Noto Kufi Arabic", "Noto Sans Arabic", system-ui, sans-serif;
+    }
+
+    .ar .section ul {
+      padding-left: 0;
+      padding-right: 20px;
+    }
+
+    .footer {
+      margin: 22px 0 10px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .footer a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    @media (max-width: 980px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 24px;
+      }
+
+      .panel {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <section class="hero">
+      <div class="hero-top">
+        <div class="title-wrap">
+          <h1>Privacy Policy <span style="color: var(--primary);">|</span> سياسة الخصوصية</h1>
+          <p>
+            This page explains how <strong>Salary Calculator / حساب الراتب</strong> handles information.
+            It is presented in both English and Arabic for clarity and ease of access.
+          </p>
+          <div class="badges">
+            <span class="badge">Salary Calculator | حساب الراتب</span>
+            <span class="badge">Last updated: March 27, 2026</span>
+            <span class="badge">GitHub Pages Ready</span>
+          </div>
+        </div>
+
+        <aside class="contact-card">
+          <h2>Contact / التواصل</h2>
+          <p><strong>Legal name / الاسم القانوني:</strong><br>Benissa Abdullah Algali</p>
+          <p><strong>Email:</strong><br><a href="mailto:benissatelawih@outlook.com">benissatelawih@outlook.com</a></p>
+          <p><strong>GitHub:</strong><br><a href="https://github.com/Benesal20034" target="_blank" rel="noopener">Benesal20034</a></p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="panel en">
+        <div class="panel-header">
+          <h2>English</h2>
+          <span class="tag">EN</span>
+        </div>
+
+        <div class="section">
+          <h3>1. Introduction</h3>
+          <p>
+            This Privacy Policy explains how the <strong>Salary Calculator</strong> app handles user information.
+            By using the app, you agree to this policy.
+          </p>
+        </div>
+
+        <div class="section">
+          <h3>2. Information the app may process</h3>
+          <ul>
+            <li>Salary values and calculation inputs entered by the user.</li>
+            <li>Saved calculation results stored locally on the device when the user chooses to save them.</li>
+            <li>Basic technical and advertising-related data that may be collected by third-party advertising services such as Google AdMob.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>3. How information is used</h3>
+          <ul>
+            <li>To calculate salary-related values inside the app.</li>
+            <li>To store saved results locally on the device for the user's convenience.</li>
+            <li>To display ads and support the app through advertising services.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>4. Local storage</h3>
+          <p>
+            Saved salary results are stored locally on the user's device. They are not intended to be publicly shared unless the user chooses to share them manually.
+          </p>
+        </div>
+
+        <div class="section">
+          <h3>5. Advertising</h3>
+          <p>
+            The app may display ads using Google AdMob or similar advertising services. These services may collect device identifiers,
+            advertising data, and other technical information according to their own privacy policies.
+          </p>
+        </div>
+
+        <div class="section">
+          <h3>6. Third-party links and services</h3>
+          <p>
+            The app may include links to external pages such as privacy pages, app store pages, rating pages, or email/contact actions.
+            Those services are governed by their own privacy practices.
+          </p>
+        </div>
+
+        <div class="section">
+          <h3>7. Data sharing</h3>
+          <p>
+            We do not sell personal information. Information may be processed by third-party service providers only to the extent necessary
+            for app functionality, advertising, store services, or user-requested actions.
+          </p>
+        </div>
+
+        <div class="section">
+          <h3>8. Children's privacy</h3>
+          <p>
+            The app is not specifically directed to children. If you believe information has been provided inappropriately,
+            please contact us and we will review the request.
+          </p>
+        </div>
+
+        <div class="section">
+          <h3>9. Changes to this policy</h3>
+          <p>
+            This Privacy Policy may be updated from time to time. The updated version will be posted on this page with a revised date.
+          </p>
+        </div>
+
+        <div class="section">
+          <h3>10. Contact</h3>
+          <p>
+            For questions regarding this Privacy Policy, contact:<br>
+            <strong>Benissa Abdullah Algali</strong><br>
+            <a href="mailto:benissatelawih@outlook.com">benissatelawih@outlook.com</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="panel ar">
+        <div class="panel-header">
+          <h2>العربية</h2>
+          <span class="tag">AR</span>
+        </div>
+
+        <div class="section">
+          <h3>1. المقدمة</h3>
+          <p>
+            توضح سياسة الخصوصية هذه كيفية تعامل تطبيق <strong>حساب الراتب</strong> مع معلومات المستخدم.
+            باستخدامك للتطبيق، فإنك توافق على هذه السياسة.
+          </p>
+        </div>
+
+        <div class="section">
+          <h3>2. المعلومات التي قد يعالجها التطبيق</h3>
+          <ul>
+            <li>قيم الراتب ومدخلات الحساب التي يُدخلها المستخدم.</li>
+            <li>نتائج الحساب المحفوظة محليًا على الجهاز عندما يختار المستخدم حفظها.</li>
+            <li>بيانات تقنية وإعلانية أساسية قد تجمعها خدمات إعلانية خارجية مثل Google AdMob.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>3. كيفية استخدام المعلومات</h3>
+          <ul>
+            <li>لحساب قيم الراتب داخل التطبيق.</li>
+            <li>لحفظ النتائج محليًا على الجهاز لراحة المستخدم.</li>
+            <li>لعرض الإعلانات ودعم التطبيق من خلال خدمات الإعلانات.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>4. التخزين المحلي</h3>
+          <p>
+            يتم حفظ نتائج الراتب المحفوظة محليًا على جهاز المستخدم. ولا يُقصد مشاركتها علنًا إلا إذا اختار المستخدم مشاركتها بنفسه.
+          </p>
+        </div>
+
+        <div class="section">
+          <h3>5. الإعلانات</h3>
+          <p>
+            قد يعرض التطبيق إعلانات باستخدام Google AdMob أو خدمات إعلانية مشابهة.
+            وقد تقوم هذه الخدمات بجمع معرّفات الجهاز وبيانات إعلانية ومعلومات تقنية أخرى وفقًا لسياسات الخصوصية الخاصة بها.
+          </p>
+        </div>
+
+        <div class="section">
+          <h3>6. الروابط والخدمات الخارجية</h3>
+          <p>
+            قد يتضمن التطبيق روابط لصفحات خارجية مثل صفحة سياسة الخصوصية أو صفحة المتجر أو صفحة التقييم أو البريد الإلكتروني ووسائل التواصل.
+            وتخضع هذه الخدمات لسياسات الخصوصية الخاصة بها.
+          </p>
+        </div>
+
+        <div class="section">
+          <h3>7. مشاركة البيانات</h3>
+          <p>
+            نحن لا نبيع المعلومات الشخصية. وقد تتم معالجة بعض المعلومات بواسطة مزودي خدمات خارجيين فقط بالقدر اللازم لتشغيل التطبيق
+            أو عرض الإعلانات أو تنفيذ الخدمات المرتبطة بالمتجر أو الطلبات التي يختارها المستخدم.
+          </p>
+        </div>
+
+        <div class="section">
+          <h3>8. خصوصية الأطفال</h3>
+          <p>
+            التطبيق غير موجّه بشكل خاص للأطفال. وإذا كنت تعتقد أنه تم تقديم معلومات بطريقة غير مناسبة، يرجى التواصل معنا وسنراجع الطلب.
+          </p>
+        </div>
+
+        <div class="section">
+          <h3>9. التغييرات على هذه السياسة</h3>
+          <p>
+            قد يتم تحديث سياسة الخصوصية هذه من وقت لآخر. وسيتم نشر النسخة المحدثة على هذه الصفحة مع تاريخ التحديث الجديد.
+          </p>
+        </div>
+
+        <div class="section">
+          <h3>10. التواصل</h3>
+          <p>
+            إذا كانت لديك أي أسئلة بخصوص سياسة الخصوصية هذه، يرجى التواصل مع:<br>
+            <strong>Benissa Abdullah Algali</strong><br>
+            <a href="mailto:benissatelawih@outlook.com">benissatelawih@outlook.com</a>
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <div class="footer">
+      Suggested GitHub Pages repository for your username: <strong>Benesal20034.github.io</strong>.<br>
+      Upload this file as <strong>index.html</strong> in the repository root.
+    </div>
+  </div>
+</body>
+</html>
